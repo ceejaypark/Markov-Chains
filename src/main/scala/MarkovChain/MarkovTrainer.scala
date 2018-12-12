@@ -23,10 +23,7 @@ object MarkovTrainer {
   }
 
   private def segmentSentence(sentence: String) ={
-    sentence.
-      split(" ")
-      .+:("")
-      .:+("")
+    sentence.split(" ").+:("").:+("")
       .sliding(windowSize)
       .toList
   }
